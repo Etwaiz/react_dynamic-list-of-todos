@@ -13,7 +13,7 @@ export const TodoList: React.FC<Props> = ({
   selectTodo,
   selectedTodoId,
 }) => {
-  function handlSelectClick(todo: Todo) {
+  function handleSelectClick(todo: Todo) {
     selectTodo(todo);
   }
 
@@ -37,7 +37,7 @@ export const TodoList: React.FC<Props> = ({
           <TodoListItem
             key={todo.id}
             todo={todo}
-            selectTodo={() => handlSelectClick(todo)}
+            selectTodo={() => handleSelectClick(todo)}
             isSelected={todo.id === selectedTodoId}
           />
         ))}
