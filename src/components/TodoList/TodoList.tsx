@@ -4,17 +4,17 @@ import { TodoListItem } from '../TodoListItem';
 
 type Props = {
   todos: Todo[];
-  selectTodo: (todo: Todo) => void;
+  onSelectTodo: (todo: Todo) => void;
   selectedTodoId: number | undefined;
 };
 
 export const TodoList: React.FC<Props> = ({
   todos,
-  selectTodo,
+  onSelectTodo,
   selectedTodoId,
 }) => {
   function handleSelectClick(todo: Todo) {
-    selectTodo(todo);
+    onSelectTodo(todo);
   }
 
   return (
